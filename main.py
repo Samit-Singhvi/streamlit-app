@@ -24,7 +24,7 @@ def model_prediction(test_image):
 def main():
     st.sidebar.title("Dashboard")
     app_mode = st.sidebar.selectbox("Select Page", ["Prediction"])
-    st.sidebar.image(r"C:\Users\Hp\Downloads\logo1.jpg", width=100)
+    st.sidebar.image("home_img.jpg", width=100)
     st.sidebar.title("Food Predictor")
     st.sidebar.markdown("---")
 
