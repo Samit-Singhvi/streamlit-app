@@ -19,7 +19,7 @@ app_mode = st.sidebar.selectbox("Select Page",["Home","About Project","Predictio
 #Main Page
 if(app_mode=="Home"):
     st.header("FRUITS & VEGETABLES RECOGNITION SYSTEM")
-    image_path = "/Download_image/home_img.jpg"
+    image_path = "home_img.jpg"
     st.image(image_path)
 
 #About Project
