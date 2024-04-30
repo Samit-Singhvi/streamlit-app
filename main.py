@@ -3,7 +3,6 @@ import tensorflow as tf
 import numpy as np
 import urllib.parse
 import requests
-from bs4 import BeautifulSoup
 
 def extract_csrf_token(response_cookies):
     for cookie in response_cookies:
