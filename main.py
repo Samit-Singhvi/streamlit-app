@@ -57,18 +57,17 @@ def main():
             csrf_token = extract_csrf_token(django_response.cookies)
             headers = {"X-CSRFToken": csrf_token}if csrf_token else {}
             
-
             response = requests.get(django_url + "?prediction=" + prediction_result)
-            # response = requests.post(django_url, data={"prediction": prediction_result},headers=headers)
 
-        
             if response.status_code == 200:
                 st.write("Prediction result sent back to Django web app successfully!")
             else:
                 st.error("Failed to send prediction result to Django web app.")
 
-            
+            # Construct markdown link with prediction result
+            st.markdown('[Link to Another Web App](http://localhost:8080/?pd='+ prediction_result +'){:target="_blank"}')
+
     st.button('Go to Another Web App')
-    st.markdown('[Link to Another Web App](http://localhost:8080/?pd='+ prediction_result +'){:target="_blank"}')
+
 if __name__ == "__main__":
     main()
