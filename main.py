@@ -70,5 +70,5 @@ def main():
             
     st.button('Go to Another Web App')
     st.markdown('[Link to Another Web App](http://localhost:8080/?pd='+ prediction_result +'){:target="_blank"}')
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
